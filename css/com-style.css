@@ -1,0 +1,347 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:"Poppins", sans-serif;
+   scroll-behavior: smooth;
+
+}
+:root{
+    --white-color: #fff;
+    --main-color:#071b3a;
+    --second-color:#ddd;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+.home{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4,9,30,0.5)),url(../com-imgs/Comm-img\ \(1\).png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+}
+header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+     padding: 4px 100px;
+     
+     
+}
+header.sticky{
+ padding: 5px 80px;
+ background: #071b3a71;
+ backdrop-filter: blur(10px);
+  box-shadow: 0 3px 6px rgba(5, 17, 19, 0.2);
+  border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 0px 20px 20px;
+  -moz-border-radius: 0 20px 20px 0;
+  -ms-border-radius: 0 20px 20px 0;
+  -o-border-radius: 0 20px 20px 0;
+
+}
+header .ieee-logo{
+    position: relative;
+    width: 180px;
+    padding-top: 1px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+header ul li {
+ list-style: none;
+ padding: 20px;
+ 
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+   position: relative;
+
+}
+header .mnu-logo{
+  width: 90px;
+   margin-left: -250px;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.4s ease;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header ul li a.active::after {
+  width: 100%;
+}
+header .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    font-size:20px ;
+}
+.text-box p span {
+    font-size: 24px;
+}
+
+header .nav-ul {
+ position: absolute;
+ display: block;
+ background: #071b3a;
+ height: 100vh;
+ width: 200px;
+ top: 0;
+ right:-200px;
+ text-align: left;
+ z-index: 150;
+}
+
+header .fa{
+  display: block;
+  color: #fff;
+  padding: 15px;
+}
+ header .fa-bars{
+         margin-right: -267px;
+        font-size: 18px;
+  
+ }
+ header .ieee-logo{
+           width: 111px;
+        margin-left: -106px;
+}
+header .mnu-logo{
+          width: 60px;
+        margin-right: 224px;
+}
+}
+/* ***************************About com intro************************************* */
+
+.about{
+    height: 75vh;
+    width: 100%;
+    background: var(--second-color);
+    position: relative;
+    margin: auto;
+    border-bottom: 10px solid var(--second-color);
+    border-radius: 10px ;
+}
+.about #about-com{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    text-align: center;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about #about-com h2{
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.about #about-com p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ ****************************Committees Section***************** */
+.coms{
+    width: 100%;
+   min-height: 100vh;
+    background: var(--second-color);
+    padding: 60px 80px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 250px;
+
+      
+}
+
+.coms h2{
+   font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 34%;
+    
+}
+
+.coms-grid{
+
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.coms-card{
+position: relative;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+
+}
+
+.coms-card img{
+  display: block;
+    width: 100%;
+  height: 100%;
+  position:center;
+  transition: transform 0.4s ease;
+  background: var(--second-color);
+}
+.coms-info{
+ position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 17, 19, 0.7);
+  color: #fff;
+  padding: 20px;
+  transition: bottom 0.4s ease;
+  text-align: left;
+}
+.coms-info h3{
+   margin-bottom: -4px;
+   margin-top: -2px; /**/
+  font-size: 1.3rem;
+  color:var(--second-color);
+}
+.coms-card:hover img{
+    transform: scale(1.1);
+    background-color: #071b3a;
+}
+.coms-card:hover .coms-info{
+    bottom: 0px;
+}
+/* ****************************************foooter****************** */
+ .footer{
+    position: relative;
+    width: 100%;
+    height:350px;
+    background-color:#071b3a;
+    padding: 10px 20px;
+    margin-top: 100px;
+    
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid var(--second-color);
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .social h4{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.footer .container .social a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.footer .container .social a i{
+    transition: 0.3s;
+}
+.footer .container .social a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+}
+.footer p{
+    color: var(--white-color);
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+} 
+.center h3{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+.center a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;
+}
+.center a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+     text-decoration: underline;
+}

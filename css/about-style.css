@@ -1,0 +1,451 @@
+:root{
+    --white-color: #fff;
+    --main-color:#071b3a;
+    --second-color:#ddddddc5;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:"Poppins", sans-serif;
+   scroll-behavior: smooth;
+
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+.home{
+  background-image:linear-gradient(rgba(4, 9, 30, 0.4),rgba(4,9,30,0.4)),url(../about-imgs/abautUs.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
+header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+     padding: 4px 100px;
+     
+     
+}
+header.sticky{
+ padding: 5px 80px;
+ background: #071b3a71;
+ backdrop-filter: blur(10px);
+  box-shadow: 0 3px 6px rgba(5, 17, 19, 0.2);
+  border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 0px 20px 20px;
+  -moz-border-radius: 0 20px 20px 0;
+  -ms-border-radius: 0 20px 20px 0;
+  -o-border-radius: 0 20px 20px 0;
+
+}
+header .ieee-logo{
+    position: relative;
+    width: 180px;
+    padding-top: 1px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    
+}
+header ul li {
+ list-style: none;
+ padding: 20px;
+ 
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+   position: relative;
+}
+header .mnu-logo{
+  width: 90px;
+   margin-left: -250px;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.4s ease;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header ul li a.active::after {
+  width: 100%;
+}
+header .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    font-size:20px ;
+}
+.text-box p span {
+    font-size: 24px;
+}
+
+header .nav-ul {
+ position: absolute;
+ display: block;
+ background: #071b3a;
+ height: 100vh;
+ width: 200px;
+ top: 0;
+ right:-200px;
+ text-align: left;
+ z-index: 150;
+}
+
+header .fa{
+  display: block;
+  color: #fff;
+  padding: 15px;
+}
+ header .fa-bars{
+         margin-right: -267px;
+        font-size: 18px;
+  
+ }
+ header .ieee-logo{
+    width: 111px;
+    margin-left: -106px;
+}
+header .mnu-logo{
+          width: 60px;
+        margin-right: 224px;
+}
+header.sticky{
+ padding:4px;
+
+}
+}
+.about-slog h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+ /* ****************vision section*************************************** */
+.vision{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+.vision .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 100px;
+   
+
+}
+.content h2{
+    font-size: 40px;
+    color:#071b3a;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    margin-top: -90px;
+
+}
+.content p{
+    font-size: 15px;
+    color:#000000;
+    line-height: 1.;
+    text-wrap: wrap;
+}
+.ved ,.content{
+    width: 45%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.ved video{
+    width: 100%;
+    height: 100%;
+    border: 5px solid #071b3a;
+    border-radius: 20px;
+}
+/*===============================New boar===================================== */
+.new-board{
+    width: 100%;
+    height: 100vh;
+    background-color: #071b3a;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.new-board h1{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+  
+}
+/*===============================New boar===================================== */
+#new .founder{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    column-gap: 25%;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 70px;
+}
+ /* ****************board section*************************************** */
+.board-section{
+    width: 100%;
+    height: 1700px;
+    position: relative;
+}
+.board-section h2{
+    text-align: center;
+    font-size: 50px;
+    color: #071b3a;
+    text-decoration: underline;
+    padding-bottom: 30px;
+   
+}
+
+.board-section .container{
+    width: 90%;
+    margin: auto;
+}
+.founder{
+
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    column-gap: 30%;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.card{
+    width: 200px;
+    height: 350px;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    height:250px;
+   object-fit: cover;         
+  object-position: center;  
+   display: block;
+   border-radius: 10px;
+}
+
+.officers{
+    display: grid;
+    grid-template-columns: repeat(5,200px);
+    column-gap: 3%;
+    width: 100%;
+    margin: auto;
+    margin-left: 30px;
+     margin-bottom: 40px;
+}
+.board{
+       display: grid;
+    grid-template-columns: repeat(5,200px);
+ 
+    grid-gap: 3%;
+    row-gap: 4%;
+    width: 100%;
+    margin: auto;
+    margin-left: 30px;
+     margin-bottom: 40px;
+}
+.data{
+    width: 200px;
+    background-color: var(--second-color);
+    padding: 4px;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+     margin-top: 8px;
+    left: 0;
+    right: 0;
+    margin-inline:auto;
+    text-align: center ;
+    /* opacity: 0; */
+    transition: opecity 1s 1s;
+}
+
+.data a{
+    color: var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.data a i{
+    transition: 0.3s;
+}
+.data a:hover{
+    color: rgb(25, 15, 82);
+    scale: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* *************************Best Members************************************ */
+/*
+.best-container{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.best-head{
+ 
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+    color: #071b3a;
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+.best-parent{
+    overflow: auto;
+}
+.best-card{
+    width: 27%;
+    height: 200px;
+    float: left;
+    padding: 10px;
+    border: 1px solid #071b3a3a;
+    border-radius: 50px 10px;
+    margin-right: 1%;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 58px 8px #071b3a inset;
+}
+.card3{
+    width: 40%;
+    height: 200px;
+}
+.best-card h3{
+    color: #071b3a;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.best-card img{
+    width: 130px;
+    padding-right: 5%;
+    
+}*/
+/* * ****************************************foooter****************** */ 
+ .footer{
+    position: relative;
+    width: 100%;
+    height:350px;
+    background-color:#071b3a;
+    padding: 10px 20px;
+    
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid var(--second-color);
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .social h4{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.footer .container .social a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.footer .container .social a i{
+    transition: 0.3s;
+}
+.footer .container .social a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+}
+.footer p{
+    color: var(--white-color);
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+} 
+.center h3{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+.center a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;
+}
+.center a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+     text-decoration: underline;
+}

@@ -1,0 +1,530 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:"Poppins", sans-serif;
+   scroll-behavior: smooth;
+
+}
+:root{
+    --white-color: #fff;
+    --main-color:#071b3a;
+    --second-color:#ddd;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+.home{
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5),rgba(4,9,30,0.5)),url(../act-imgs/act-img\ \(2\).png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+ 
+}
+header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+     padding: 4px 100px;
+     
+     
+}
+header.sticky{
+ padding: 5px 80px;
+ background: #071b3a71;
+ backdrop-filter: blur(10px);
+  box-shadow: 0 3px 6px rgba(5, 17, 19, 0.2);
+  border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 0px 20px 20px;
+  -moz-border-radius: 0 20px 20px 0;
+  -ms-border-radius: 0 20px 20px 0;
+  -o-border-radius: 0 20px 20px 0;
+
+}
+header .ieee-logo{
+    position: relative;
+    width: 180px;
+    padding-top: 1px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    
+}
+header ul li {
+ list-style: none;
+ padding: 20px;
+ 
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+   position: relative;
+}
+header .mnu-logo{
+  width: 90px;
+   margin-left: -250px;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.4s ease;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+/* Keep underline for active link */
+header ul li a.active::after {
+  width: 100%;
+}
+header .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    font-size:20px ;
+}
+.text-box p span {
+    font-size: 24px;
+}
+
+header .nav-ul {
+ position: absolute;
+ display: block;
+ background: #071b3a;
+ height: 100vh;
+ width: 200px;
+ top: 0;
+ right:-200px;
+ text-align: left;
+ z-index: 150;
+}
+
+header .fa{
+  display: block;
+  color: #fff;
+  padding: 15px;
+}
+ header .fa-bars{
+         margin-right: -267px;
+        font-size: 18px;
+  
+ }
+ header .ieee-logo{
+    width: 111px;
+    margin-left: -106px;
+}
+header .mnu-logo{
+          width: 60px;
+        margin-right: 224px;
+}
+header.sticky{
+ padding:4px;
+
+}
+}
+/* ********************** About Section******************************** */
+/* Section base */
+.activity {
+  width: 100%;
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.activity.alt {
+  background: #eef3fa; /* لون مختلف للتمييز بين السكشنات */
+}
+
+/* Container layout */
+.activity .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Text section */
+.activity .content {
+  flex: 1 1 45%;
+}
+
+.activity .content h2 {
+  font-size: 36px;
+  color: #071b3a;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  margin-top: -20px;
+}
+
+.activity .content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Video section */
+.activity .ved {
+  flex: 1 1 45%;
+}
+
+.activity .ved video {
+  width: 100%;
+  border-radius: 20px;
+  border: 4px solid #071b3a;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.activity .ved video:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .activity .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .activity .content, .activity .ved {
+    flex: 1 1 100%;
+  }
+  .activity .content h2 {
+    font-size: 28px;
+  }
+  .activity .content p {
+    font-size: 15px;
+  }
+}
+
+
+
+/* **********************WorkShops Section******************************************************** */
+*::after,
+ *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.act{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.act .content{
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background-color: linear-gradient(180deg,rgba(255,255,255,0.3) 0% ,rgba(255,255,255,0) 100%);
+backdrop-filter: blur(30px);
+border-radius: 20px;
+width: min(1300px ,100%);
+box-shadow:  0 0.5px 0 1px rgba(255,255,255,0.2) inset , 0 1px 0 0 rgba(255,255,255,0.65) inset , 0 4px 16px rgba(0,0,0,0.1)  ;
+z-index: 50;
+}
+.info{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+  padding: 0 35px;
+  text-align:left;
+  margin-left: 38px;
+
+
+}
+.info p{
+  /* color: var(--main-color);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  letter-spacing: 2; */
+    font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  width: 110%;
+ 
+}
+.btn{
+  display: block;
+  padding: 10px 40px;
+  margin: 10px auto ;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  outline: 0;
+  text-decoration: none;
+  color: #071b3a;
+  background-color: rgba(255, 255, 255 , 0.9);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+.swiper{
+  width: 450px;
+  height: 420px;
+  padding: 50px -50px 50px 0;
+}
+.swiper-slide{
+  position: relative;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.swiper-slide span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 7px 18px;
+  margin: 10px;
+  border-radius: 20px;
+  letter-spacing: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  background: rgba(255,255,255,0.095);
+  box-shadow:inset 1px -2px 20px rgba(214,214,214,0.17) , inset -3px 3px 3px rgba(255,255,255,0.4) ;
+  backdrop-filter: blur(75px);
+}
+.swiper-slide h2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  font-weight: 400;
+  font-style: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 20px 20px;
+}
+.swiper-slide:nth-child(1n){
+  
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techne\ summit.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(2n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/BUC.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(3n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/aiandent.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(4n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/competion.jpg) no-repeat 50% 50% / cover ;
+
+}
+.swiper-slide:nth-child(5n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/congress.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(6n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/creativa.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(7n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/ESPC.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(8n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/ieee\ day\ 2025.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(9n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/IEEEDay.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(10n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/ieeeday2024.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(11n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/maker\ faire.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(12n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techne\ summit\ 2025.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(13n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techne\ summit.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(14n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techne_driftsHR.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(15n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techni-Drifts.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(16n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/techshift2025.jpg) no-repeat 50% 50% / cover ;
+}
+.swiper-slide:nth-child(17n){
+  background: linear-gradient(to top , #0f2027 , #203a4300 ,#2c536400),url(../act-imgs/websissions.jpg) no-repeat 50% 50% / cover ;
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+ background-color: #171442;
+ background-image: linear-gradient(225deg ,#251364 0%  , #41225c 50% ,#2b86ac 100% );
+ animation: animate 25s linear infinite;
+ bottom: -150px;
+
+}
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0;
+}
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0;
+  animation-duration: 18s;
+}
+@keyframes animate {
+  0%{
+         transform: translateY(0) rotate(0deg);
+         opacity: 1;
+         border-radius: 0;
+  }
+  100%{
+           transform:translatey(-1000px) rotate(720deg);
+           opacity: 0;
+           border-radius: 50%;
+  }
+  
+}
+@media (max-width:750px) {
+  .content{
+    flex-direction: column-reverse;
+  }
+  .btn{
+    margin: 10px auto;
+  }
+}
+
+/* * ****************************************foooter****************** */ 
+  .footer{
+    position: relative;
+    width: 100%;
+    height:350px;
+    background-color:var(--main-color);
+    padding: 10px 20px;
+    
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid var(--second-color);
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .social h4{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.footer .container .social a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.footer .container .social a i{
+    transition: 0.3s;
+}
+.footer .container .social a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+}
+.footer p{
+    color: var(--white-color);
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+} 
+.center h3{
+    color: var(--white-color);
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+.center a{
+    color: var(--white-color);
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;
+}
+.center a:hover{
+    color: var(--second-color);
+     padding-right: 12px;
+     text-decoration: underline;
+}
